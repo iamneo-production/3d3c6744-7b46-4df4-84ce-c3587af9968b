@@ -1,1 +1,80 @@
-<p>addcenter works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Cool King</div>
+        <ul>
+            <li><a class="active" routerLink="/admin/addcenter" id="adminAddCenter">Add Center</a></li>
+            <li><a routerLink="/admin/centerprofile" id="adminCenterProfile">Center Profile</a></li>
+            <li><a routerLink="/user/login" class="Logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="ab"></div>
+    <div class="homebody">
+        <div class="rounded " id="grid">
+            <h3>Add Center</h3><br>
+            <form [formGroup]="AddCenterForm" autocomplete="off">
+                <input class="form-element" formControlName="addName" placeholder="Enter the Name" id="addName"><br>
+                <span style="color: red; font-size: 15px; margin-left: 21%;"
+                    *ngIf="addName && addName.invalid && addName.touched && addName.errors">Please
+                    enter valid Name</span><br>
+
+                <input class="form-element" formControlName="addNumber" placeholder="Enter the Phone number"
+                    id="addNumber"><br>
+                <span style="color: red; font-size: 15px;  margin-left: 21%;"
+                    *ngIf="addNumber && addNumber.invalid && addNumber.touched && addNumber.errors">Please
+                    enter valid Number</span><br>
+
+                <input class="form-element" formControlName="addAddress" placeholder="Enter the Address"
+                    id="addAddress"><br>
+                <span style="color: red; font-size: 15px;  margin-left: 21%;"
+                    *ngIf="addAddress && addAddress.invalid && addAddress.touched && addAddress.errors">Please
+                    enter valid Address</span><br>
+
+
+                <input class="form-element" formControlName="addImageUrl" placeholder="Enter the Image Url"
+                    id="addImageUrl"><br>
+                <span style="color: red; font-size: 15px;  margin-left: 21%;"
+                    *ngIf="addImageUrl && addImageUrl.invalid && addImageUrl.touched && addImageUrl.errors">Please
+                    enter valid ImageUrl</span><br>
+
+                <input class="form-element" formControlName="addEmail" placeholder="Enter the mail id"
+                    id="addEmail" autocomplete="off"><br>
+                <span style="color: red; font-size: 15px;  margin-left: 21%;"
+                    *ngIf="addEmail && addEmail.invalid && addEmail.touched && addEmail.errors">Please
+                    enter valid Email</span><br>
+
+                <textarea class="form-element" formControlName="addContentDescription"
+                    placeholder="Description about Service center" id="addContentDescription" rows="3"></textarea><br>
+                <span style="color: red; font-size: 15px;  margin-left: 21%;"
+                    *ngIf="addContentDescription && addContentDescription.invalid && addContentDescription.touched && addContentDescription.errors">Please
+                    enter valid Content Description</span><br>
+                <button type="submit" class="btn btn-dark" [disabled]="AddCenterForm.invalid" id="addButton"
+                    (click)="Addcenter()">Add</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
