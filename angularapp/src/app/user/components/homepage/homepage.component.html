@@ -1,1 +1,58 @@
-<p>homepage works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+  <nav>
+    <div class="logo">Cool King</div>
+    <ul>
+      <li><a class="active" routerLink="/user/homepage" id="homeButton">Home</a></li>
+      <li><a id="DashBoardButton">Dashboard</a></li>
+      <li><a routerLink="/user/appointment" id="myBookingButton">My Booking</a></li>
+      <li><a class="Logout" (click)="Logout()">Logout</a></li>
+    </ul>
+  </nav>
+  <div class="ab"></div>
+  <div class="input">
+    <input class="box" type="text" placeholder="Type here to search" />
+    <a href="#" class="button" id="searchButton">Search</a>
+  </div>
+  <div class="homebody">
+    <div class="container">
+      <div class="row">
+
+        <ng-container *ngFor="let e of  service.list">
+          <div id="grid" class="card col-md-3">
+            <img src="{{e.serviceCenterImageUrl}}" alt="ACServiceimg" (click)="select_center(e)">
+            <h3>{{e.serviceCenterName}}</h3>
+            <p>Place:{{e.serviceCenterAddress}}</p>
+            <p>Timing: 00:00 to 23:59</p>
+          </div>
+        </ng-container>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
