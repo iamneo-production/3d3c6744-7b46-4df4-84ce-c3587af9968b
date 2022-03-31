@@ -1,1 +1,64 @@
-<p>signup works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <div>
+            <span class="header">Register</span>
+        </div>
+    </nav>
+    <div class="ab"></div>
+    <div class="container-fluid ">
+
+        <form [formGroup]="SignupForm" autocomplete="off" >
+
+            <select formControlName="userRole" placeholder="Enter admin/user" id="admin/user" name="userRole" #t
+                (change)="f(t.value)">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select><br>
+            <span style="color: red; font-size: 15px; margin-left: 7%;"
+                *ngIf="userRole && userRole.invalid && userRole.touched && userRole.errors">Please
+                choose admin/user</span><br>
+
+            <input type="email" formControlName="email" placeholder="Enter email" id="email" name="email"><br>
+            <span style="color: red; font-size: 15px; margin-left: 7%;"
+                *ngIf="email && email.invalid && email.touched && email.errors">Please
+                enter valid Email Address</span><br>
+
+            <input type="text" formControlName="username" placeholder="Enter username" id="username"
+                name="username"><br>
+            <span style="color: red; font-size: 15px;  margin-left: 7%;"
+                *ngIf="username && username.invalid && username.touched && username.errors">Please
+                enter valid username</span><br>
+
+            <input type="text" formControlName="mobileNumber" placeholder="Enter mobile number" id="mobileNumber"
+                name="mobileNumber"><br>
+            <span style="color: red; font-size: 15px;  margin-left: 7%;"
+                *ngIf="mobileNumber && mobileNumber.invalid && mobileNumber.touched && mobileNumber.errors">Please
+                enter valid Mobile Number</span><br>
+
+            <input type="password" formControlName="password" placeholder="Enter password" id="password"
+                name="password" #t1><br>
+            <span style="color: red; font-size: 15px;  margin-left: 7%;"
+                *ngIf="password && password.invalid && password.touched && password.errors">Please
+                enter valid Password</span><br>
+
+            <input type="password" formControlName="ConfirmPassword" placeholder="Confirm password" id="ConfirmPassword"
+                name="ConfirmPassword" #t2><br>
+            <span style="color: red; font-size: 15px;  margin-left: 7%;"
+            *ngIf="(ConfirmPassword && ConfirmPassword.invalid && ConfirmPassword.touched )||(t1.value!=t2.value &&  t2.value!='' && t1.value!='')">
+            Password do not match</span><br>
+
+            <button type="submit" class="btn btn-primary" id="submitButton"
+                [disabled]="SignupForm.invalid"  (click)="submit()">Submit</button>
+        </form>
+        <p>Already a user?<a routerLink="/user/login" id="signinLink">Login</a></p>
+
+    </div>
+</body>
+</html>
