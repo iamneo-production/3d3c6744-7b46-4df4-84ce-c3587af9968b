@@ -1,1 +1,39 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav >
+        <div >
+          <span class="header">Login</span>
+        </div>
+      </nav>
+    <div class="ab">
+      
+
+    </div>
+    <div class="container-fluid ">
+        <form [formGroup]="LoginForm" autocomplete="off">
+        <input type="email" class="error" placeholder="Enter email" id="email" formControlName= "email" ><br>
+     
+        <span style="color: red; font-size: 15px; margin-left: 30%;" *ngIf="email && email.invalid && email.touched && email.errors">Please enter valid Email address</span><br>
+        <input type="password" class="error" placeholder="Enter password" id="password" formControlName="password"><br>
+        
+        <span style="color: red; font-size: 15px; margin-left: 30%;" *ngIf="password && password.invalid && password.touched">Please enter valid password</span><br>
+
+        <button type="submit" class="btn btn-primary"  id="loginButton" [disabled]="LoginForm.invalid" (click)="Login()">Login</button>
+        <p>New User/admin?<a  routerLink="/user/signup" id="signupLink">SignUp</a></p>
+       
+       </form>
+     
+       
+      
+    </div>
+</body>
+
+</html>
