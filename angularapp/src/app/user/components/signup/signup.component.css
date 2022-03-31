@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 85px;
+  background-color: #311B92;
+  padding: 10px;
+}
+
+.header{
+  margin-left: 40%;
+  color:white;
+  font-size: 50px;
+  letter-spacing: 4px;
+  margin-top: 1px;
+}
+.ab {
+  background-color: white;
+  height: 14px;
+}
+
+.container-fluid  {
+  background-color: #9E9E9E;
+  height: 94vh;
+  width: 100%;
+}
+
+
+input,
+select {
+  font-size: 20px;
+  padding: 3px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-bottom: 8px;
+  width: 40%;
+}
+
+/*
+input:hover {
+  border-color: #1b1b1b;
+  border-radius: 6px;
+}*/
+
+#submitButton {
+  color: white;
+  padding: 10px 28px;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 20%;
+}
+
+p {
+  margin-left: 20%;
+  font-size: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
