@@ -6,4 +6,5 @@ export class ServiceCenterModel{
     serviceCenterImageUrl: string='';
     serviceCentermailId: string='';
     serviceCenterDescription: string='';
+  
 }
