@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+   height: 80px;
+   background-color: #311B92;
+   padding-top: 30px;
+    padding-left: 10px;
+}
+
+nav .logo{
+display: inline;
+    color: white;
+    font-size: 22px;
+}
+nav ul{
+float: right;
+   list-style: none;
+}
+nav ul li{
+display: inline-block;
+list-style: none;
+}
+li a{
+   margin-right: 10px;
+   color: white;
+   text-decoration: none;
+}
+nav ul li a{
+  
+   color:#fff;
+   text-decoration: none;
+   font-size: 22px;
+   letter-spacing: 1px;
+   padding: 5px 8px;
+ 
+}
+nav ul li a:hover, nav ul li a.active{
+   color: #1b1b1b;
+   background: #fff;
+}
+.Logout{
+justify-content: space-between;
+}
+.Logout{
+    margin-left: 530px;
+    cursor: pointer;
+ }
+ .ab {
+    background-color: white;
+    height: 14px;
+  }
+
+.homebody {
+   background-color: #9E9E9E;
+   height: 100vh;
+}
+
+#d1 {
+   background-color: #9E9E9E;
+   height: 100%;
+   float: left;
+   width: 40%;
+}
+
+#d2 {
+   background-color: #9E9E9E;
+   height: 100%;
+   float: right;
+   width: 60%;
+}
+
+#grid {
+   margin-top: 2%;
+   width: 95%;
+   height: 94%;
+   background-color: white;
+   border-radius: 2%; 
+}
+
+#grid1{
+   margin-top: 5%;
+   margin-left: 10%;
+   width: 74%;
+   height: 54%;
+   background-color: #c8cfd6;
+   border-radius: 6%; 
+}
+
+.form-element {
+   font-size: 14px;
+   width: 55%;
+   height: 15%;
+   padding: 1%;
+   margin-left: 2%;
+   margin-bottom: 1%;
+   border-radius: 6px;
+   border: 3px solid white;
+
+}
+
+h4{
+   margin-left: 20%;
+   padding-top: 2%;
+}
+
+input,
+textarea {
+   background: #9E9E9E;
+   text-decoration-color: black;
+}
+
+#addButton {
+  
+   color: white;
+   padding: 6px 32px;
+   font-size: 15px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius: 8px;
+   border: 3px;
+   margin-left: 30%;
+}
+
+#productImage{
+   margin-top: 5%;
+   margin-left: 22%;
+   width: 40%;
+   height:34%;
+}
+
+#centername{
+  padding-top: 5%;
+   margin-left: 25%;
+   font-size: 30px;
+}
+
+p{
+ margin-left: 8%;
+ margin-top: 4%;
+ font-size: 22px;
+}
